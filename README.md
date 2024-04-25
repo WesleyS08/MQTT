@@ -18,34 +18,56 @@ Para usar o HiveMQ como servidor MQTT, é necessário criar uma conta e configur
 
 - Complete o formulário de registro com suas informações. Um e-mail de confirmação será enviado para você.
 
-###  Configurar o Servidor
+![Pagina inicial](/imgs/Home.png)
 
-![Pagina inicial](Home.png)
+
+###  Configurar o Servidor
 
 - Após criar a conta e fazer login, você verá uma interface com um menu lateral.
 
 - No menu lateral, clique no símbolo de + para criar um novo servidor.
 
+  ![Menu](/imgs/Menu.png)
+
 - Selecione o plano "Livre" (Free). Não se preocupe com as opções pagas, pois para este projeto o plano gratuito é suficiente.
 
+- Aparecera para selecionar o serviço em nuvem, pode deixar sendo AWS
+  
+   ![Servidor](/imgs/Servidor.png)
+  
 - Após criar o servidor, ele aparecerá na lista de "clusters".
 
-![Menu](Menu.png)
 
 ### Gerenciando o Cluster 
 
-![Servidor](Servidor.png)
-
 - Para acessar o servidor recém-criado, selecione-o na lista de clusters.
+
+![clusters](/imgs/clusters.png)
+
 
 - Você verá informações importantes, como o URL do servidor, que será usado para conectar seus dispositivos.
 
 - Anote ou copie o URL do servidor para uso posterior.
+  
 
-![clusters](clusters.png)
+![clusters_Config](/imgs/clusters_Config.png)
 
-ao gerenciamos o cluster criado, ele já nos retorna algumas informaçoes, importante como o link que usaremos para nos conectar  
+### Configurar Acesso ao Cluster
 
-![clusters_Config](clusters_Config.png)
+Antes de conectar dispositivos ao servidor, você precisa configurar as permissões de acesso.
 
-porem antes disso precisamos realizar a configuração de acesso a esse cluster 
+-Dentro do servidor, configure as permissões e usuários conforme necessário
+
+- Dependendo do uso, você pode precisar criar regras específicas para dispositivos ou tópicos.
+
+  ![Credenciais](/imgs/Credenciais.png)
+
+  ### Próximos Passos
+
+  - Apos essa configuração voce pode ir no cliente web
+ 
+  - passe as credenciais que foram criadas, e conecte ao server (Atenção com o nome do topico)
+ 
+   ![ClienteWeb](/imgs/ClienteWeb.png)
+
+  
