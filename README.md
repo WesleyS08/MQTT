@@ -130,11 +130,11 @@ O servidor recebe a mensagem e a processa como esperado:
 #### Do Servidor para o Aplicativo
 Também é possível enviar uma mensagem do servidor para o aplicativo. Veja como o servidor envia a mensagem:
 
-  ![Mensagemenviadadoserver ](/imgs/Mensagemenviadadoserver.png)
+![Mensagemenviadadoserver ](/imgs/Mensagemenviadadoserver.png)
 
 E aqui está como a mensagem é recebida no aplicativo:
 
-  ![App2](/imgs/App2.png)
+![App2](/imgs/Appp2.png)
 
   ## Como Contribuir 
 Sinta-se à vontade para contribuir para o desenvolvimento do SIAS! Você pode clonar o repositório, abrir issues ou enviar pull requests. Certifique-se de seguir as diretrizes de contribuição.
