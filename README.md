@@ -70,4 +70,82 @@ Antes de conectar dispositivos ao servidor, você precisa configurar as permiss�
  
    ![ClienteWeb](/imgs/ClienteWeb.png)
 
+  ## Projeto Android
+
+### Dependências Necessárias
+
+Para utilizar o protocolo MQTT neste projeto, você precisará instalar algumas dependências e ajustar a configuração do build.gradle. Aqui estão as etapas para adicionar as dependências corretas e modificar a configuração de embalagem (packaging):
+
+#### 1. Adicionar Dependências do HiveMQ
+
+Para incluir o cliente MQTT do HiveMQ no seu projeto, adicione a seguinte linha à seção dependencies do seu arquivo build.gradle:
+
+```
+dependencies {
+    implementation("com.hivemq:hivemq-mqtt-client:1.2.1")
+    // Outras dependências necessárias...
+}
+```
+
+#### 2. Modificar a Configuração de Embalagem (Packaging)
+
+ O protocolo MQTT pode trazer alguns recursos que precisam ser excluídos para evitar conflitos ou problemas de compilação. Para ajustar a seção de embalagem, use a seguinte configuração
+```
+android {
+    // Outras configurações do projeto...
+
+    packaging {
+        resources {
+            val exclusions = mutableListOf(
+                "META-INF/INDEX.LIST",
+                "META-INF/io.netty.versions.properties"
+            )
+            excludes.addAll(exclusions)
+        }
+    }
+}
+```
+
+### MainActivity 
+
+Nesse ponto podemos passar as informaçoes de configuração que conseguimos anteriomente,  para ocorrer a conexão ao server 
+```
+        String host = "1e09ce88868d412f98954e54496fb...";
+        String username = "User";
+        String password = "password!";
+```
+
+### Projeto em Funcionamento
+Após completar todas as etapas de configuração, conseguimos estabelecer uma comunicação entre o aplicativo e o servidor MQTT. Veja como a troca de mensagens acontece:
+
+#### Do Aplicativo para o Servidor
+Ao enviar uma mensagem do aplicativo para o servidor, ela é exibida assim:
+ 
+   ![App](/imgs/App.png)
+
+O servidor recebe a mensagem e a processa como esperado:
+
+  ![mensagemrecebida](/imgs/mensagemrecebida.png)
   
+#### Do Servidor para o Aplicativo
+Também é possível enviar uma mensagem do servidor para o aplicativo. Veja como o servidor envia a mensagem:
+
+  ![Mensagemenviadadoserver ](/imgs/Mensagemenviadadoserver.png)
+
+E aqui está como a mensagem é recebida no aplicativo:
+
+  ![App2](/imgs/App2.png)
+
+  ## Como Contribuir 
+Sinta-se à vontade para contribuir para o desenvolvimento do SIAS! Você pode clonar o repositório, abrir issues ou enviar pull requests. Certifique-se de seguir as diretrizes de contribuição.
+
+## Instalação e Configuração
+Para configurar e executar o projeto localmente, siga estas etapas:
+
+1. Clone o repositório: `git clone https://github.com/seu-usuario/MQTT.git`
+2. Navegue até o diretório do projeto
+3. Configure o ambiente (certifique-se de ter as tecnologias mencionadas instaladas)
+4. Execute o aplicativo
+  
+
+
